@@ -17,4 +17,5 @@ export default defineConfig({
     },
     target: "esnext",
   },
+  base: "/embeddable-widgets/",
 });
