@@ -58,7 +58,7 @@ function ef() {
   function Xe(f) {
     return typeof f == "object" && f !== null && f.$$typeof === a;
   }
-  function ct(f) {
+  function at(f) {
     var y = { "=": "=0", ":": "=2" };
     return "$" + f.replace(/[=:]/g, function(G) {
       return y[G];
@@ -66,7 +66,7 @@ function ef() {
   }
   var X = /\/+/g;
   function Le(f, y) {
-    return typeof f == "object" && f !== null && f.key != null ? ct("" + f.key) : y.toString(36);
+    return typeof f == "object" && f !== null && f.key != null ? at("" + f.key) : y.toString(36);
   }
   function Me(f, y, G, Y, J) {
     var q = typeof f;
@@ -231,7 +231,7 @@ function tf() {
   return _r.Fragment = s, _r.jsx = z, _r.jsxs = z, _r;
 }
 Ga.exports = tf();
-var at = Ga.exports, Fi = {}, Ka = { exports: {} }, Ke = {}, Oi = { exports: {} }, Ii = {};
+var vt = Ga.exports, Fi = {}, Ka = { exports: {} }, Ke = {}, Oi = { exports: {} }, Ii = {};
 /**
  * @license React
  * scheduler.production.min.js
@@ -306,7 +306,7 @@ function nf() {
       me = !1, V && (V = !1, Ee(De), De = -1), ce = !0;
       var N = H;
       try {
-        for (Ve(O), B = s(I); B !== null && (!(B.expirationTime > O) || C && !ct()); ) {
+        for (Ve(O), B = s(I); B !== null && (!(B.expirationTime > O) || C && !at()); ) {
           var f = B.callback;
           if (typeof f == "function") {
             B.callback = null, H = B.priorityLevel;
@@ -326,7 +326,7 @@ function nf() {
       }
     }
     var Ce = !1, Ne = null, De = -1, nt = 5, Xe = -1;
-    function ct() {
+    function at() {
       return !(a.unstable_now() - Xe < nt);
     }
     function X() {
@@ -427,7 +427,7 @@ function nf() {
           y = 5e3;
       }
       return y = N + y, C = { id: $++, callback: O, priorityLevel: C, startTime: N, expirationTime: y, sortIndex: -1 }, N > f ? (C.sortIndex = N, g(U, C), s(I) === null && C === s(U) && (V ? (Ee(De), De = -1) : V = !0, le(ye, N - f))) : (C.sortIndex = y, g(I, C), me || ce || (me = !0, ke(We))), C;
-    }, a.unstable_shouldYield = ct, a.unstable_wrapCallback = function(C) {
+    }, a.unstable_shouldYield = at, a.unstable_wrapCallback = function(C) {
       var O = H;
       return function() {
         var N = H;
@@ -550,7 +550,7 @@ function lf() {
     var l = W.hasOwnProperty(t) ? W[t] : null;
     (l !== null ? l.type !== 0 : r || !(2 < t.length) || t[0] !== "o" && t[0] !== "O" || t[1] !== "n" && t[1] !== "N") && (me(t, n, l, r) && (n = null), r || l === null ? H(t) && (n === null ? e.removeAttribute(t) : e.setAttribute(t, "" + n)) : l.mustUseProperty ? e[l.propertyName] = n === null ? l.type === 3 ? !1 : "" : n : (t = l.attributeName, r = l.attributeNamespace, n === null ? e.removeAttribute(t) : (l = l.type, n = l === 3 || l === 4 && n === !0 ? "" : "" + n, r ? e.setAttributeNS(r, t, n) : e.setAttribute(t, n))));
   }
-  var ye = a.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED, We = Symbol.for("react.element"), Ce = Symbol.for("react.portal"), Ne = Symbol.for("react.fragment"), De = Symbol.for("react.strict_mode"), nt = Symbol.for("react.profiler"), Xe = Symbol.for("react.provider"), ct = Symbol.for("react.context"), X = Symbol.for("react.forward_ref"), Le = Symbol.for("react.suspense"), Me = Symbol.for("react.suspense_list"), Ze = Symbol.for("react.memo"), ke = Symbol.for("react.lazy"), le = Symbol.for("react.offscreen"), C = Symbol.iterator;
+  var ye = a.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED, We = Symbol.for("react.element"), Ce = Symbol.for("react.portal"), Ne = Symbol.for("react.fragment"), De = Symbol.for("react.strict_mode"), nt = Symbol.for("react.profiler"), Xe = Symbol.for("react.provider"), at = Symbol.for("react.context"), X = Symbol.for("react.forward_ref"), Le = Symbol.for("react.suspense"), Me = Symbol.for("react.suspense_list"), Ze = Symbol.for("react.memo"), ke = Symbol.for("react.lazy"), le = Symbol.for("react.offscreen"), C = Symbol.iterator;
   function O(e) {
     return e === null || typeof e != "object" ? null : (e = C && e[C] || e["@@iterator"], typeof e == "function" ? e : null);
   }
@@ -662,7 +662,7 @@ function lf() {
         return "SuspenseList";
     }
     if (typeof e == "object") switch (e.$$typeof) {
-      case ct:
+      case at:
         return (e.displayName || "Context") + ".Consumer";
       case Xe:
         return (e._context.displayName || "Context") + ".Provider";
@@ -1174,7 +1174,7 @@ function lf() {
     } catch {
     }
   }
-  var dt = Math.clz32 ? Math.clz32 : yc, gc = Math.log, vc = Math.LN2;
+  var ct = Math.clz32 ? Math.clz32 : yc, gc = Math.log, vc = Math.LN2;
   function yc(e) {
     return e >>>= 0, e === 0 ? 32 : 31 - (gc(e) / vc | 0) | 0;
   }
@@ -1238,7 +1238,7 @@ function lf() {
     } else i = n & ~l, i !== 0 ? r = Gn(i) : o !== 0 && (r = Gn(o));
     if (r === 0) return 0;
     if (t !== 0 && t !== r && !(t & l) && (l = r & -r, o = t & -t, l >= o || l === 16 && (o & 4194240) !== 0)) return t;
-    if (r & 4 && (r |= n & 16), t = e.entangledLanes, t !== 0) for (e = e.entanglements, t &= r; 0 < t; ) n = 31 - dt(t), l = 1 << n, r |= e[n], t &= ~l;
+    if (r & 4 && (r |= n & 16), t = e.entangledLanes, t !== 0) for (e = e.entanglements, t &= r; 0 < t; ) n = 31 - ct(t), l = 1 << n, r |= e[n], t &= ~l;
     return r;
   }
   function wc(e, t) {
@@ -1284,7 +1284,7 @@ function lf() {
   }
   function kc(e, t) {
     for (var n = e.suspendedLanes, r = e.pingedLanes, l = e.expirationTimes, o = e.pendingLanes; 0 < o; ) {
-      var i = 31 - dt(o), u = 1 << i, c = l[i];
+      var i = 31 - ct(o), u = 1 << i, c = l[i];
       c === -1 ? (!(u & n) || u & r) && (l[i] = wc(u, t)) : c <= t && (e.expiredLanes |= u), o &= ~u;
     }
   }
@@ -1300,21 +1300,21 @@ function lf() {
     return t;
   }
   function Kn(e, t, n) {
-    e.pendingLanes |= t, t !== 536870912 && (e.suspendedLanes = 0, e.pingedLanes = 0), e = e.eventTimes, t = 31 - dt(t), e[t] = n;
+    e.pendingLanes |= t, t !== 536870912 && (e.suspendedLanes = 0, e.pingedLanes = 0), e = e.eventTimes, t = 31 - ct(t), e[t] = n;
   }
   function xc(e, t) {
     var n = e.pendingLanes & ~t;
     e.pendingLanes = t, e.suspendedLanes = 0, e.pingedLanes = 0, e.expiredLanes &= t, e.mutableReadLanes &= t, e.entangledLanes &= t, t = e.entanglements;
     var r = e.eventTimes;
     for (e = e.expirationTimes; 0 < n; ) {
-      var l = 31 - dt(n), o = 1 << l;
+      var l = 31 - ct(n), o = 1 << l;
       t[l] = 0, r[l] = -1, e[l] = -1, n &= ~o;
     }
   }
   function to(e, t) {
     var n = e.entangledLanes |= t;
     for (e = e.entanglements; n; ) {
-      var r = 31 - dt(n), l = 1 << r;
+      var r = 31 - ct(n), l = 1 << r;
       l & t | e[r] & t && (e[r] |= t), n &= ~l;
     }
   }
@@ -1789,15 +1789,15 @@ function lf() {
   function id(e, t) {
     return e === t && (e !== 0 || 1 / e === 1 / t) || e !== e && t !== t;
   }
-  var ft = typeof Object.is == "function" ? Object.is : id;
+  var dt = typeof Object.is == "function" ? Object.is : id;
   function lr(e, t) {
-    if (ft(e, t)) return !0;
+    if (dt(e, t)) return !0;
     if (typeof e != "object" || e === null || typeof t != "object" || t === null) return !1;
     var n = Object.keys(e), r = Object.keys(t);
     if (n.length !== r.length) return !1;
     for (r = 0; r < n.length; r++) {
       var l = n[r];
-      if (!I.call(t, l) || !ft(e[l], t[l])) return !1;
+      if (!I.call(t, l) || !dt(e[l], t[l])) return !1;
     }
     return !0;
   }
@@ -2335,12 +2335,12 @@ function lf() {
     rt[lt++] = _t, rt[lt++] = zt, rt[lt++] = nn, nn = e;
     var r = _t;
     e = zt;
-    var l = 32 - dt(r) - 1;
+    var l = 32 - ct(r) - 1;
     r &= ~(1 << l), n += 1;
-    var o = 32 - dt(t) + l;
+    var o = 32 - ct(t) + l;
     if (30 < o) {
       var i = l - l % 5;
-      o = (r & (1 << i) - 1).toString(32), r >>= i, l -= i, _t = 1 << 32 - dt(t) + l | n << l | r, zt = o + e;
+      o = (r & (1 << i) - 1).toString(32), r >>= i, l -= i, _t = 1 << 32 - ct(t) + l | n << l | r, zt = o + e;
     } else _t = 1 << o | n << l | r, zt = e;
   }
   function Mo(e) {
@@ -2350,7 +2350,7 @@ function lf() {
     for (; e === rl; ) rl = Pn[--Nn], Pn[Nn] = null, ll = Pn[--Nn], Pn[Nn] = null;
     for (; e === nn; ) nn = rt[--lt], rt[lt] = null, zt = rt[--lt], rt[lt] = null, _t = rt[--lt], rt[lt] = null;
   }
-  var be = null, et = null, ae = !1, pt = null;
+  var be = null, et = null, ae = !1, ft = null;
   function ss(e, t) {
     var n = st(5, null, null, 0);
     n.elementType = "DELETED", n.stateNode = t, n.return = e, t = e.deletions, t === null ? (e.deletions = [n], e.flags |= 16) : t.push(n);
@@ -2428,7 +2428,7 @@ function lf() {
     et = be = null, ae = !1;
   }
   function Fo(e) {
-    pt === null ? pt = [e] : pt.push(e);
+    ft === null ? ft = [e] : ft.push(e);
   }
   var kd = ye.ReactCurrentBatchConfig;
   function dr(e, t, n) {
@@ -2858,7 +2858,7 @@ function lf() {
   }
   function Yo(e, t) {
     if (t === null) return !1;
-    for (var n = 0; n < t.length && n < e.length; n++) if (!ft(e[n], t[n])) return !1;
+    for (var n = 0; n < t.length && n < e.length; n++) if (!dt(e[n], t[n])) return !1;
     return !0;
   }
   function Xo(e, t, n, r, l, o) {
@@ -2926,7 +2926,7 @@ function lf() {
         }
         h = h.next;
       } while (h !== null && h !== o);
-      c === null ? i = r : c.next = u, ft(r, t.memoizedState) || (He = !0), t.memoizedState = r, t.baseState = i, t.baseQueue = c, n.lastRenderedState = r;
+      c === null ? i = r : c.next = u, dt(r, t.memoizedState) || (He = !0), t.memoizedState = r, t.baseState = i, t.baseQueue = c, n.lastRenderedState = r;
     }
     if (e = n.interleaved, e !== null) {
       l = e;
@@ -2947,14 +2947,14 @@ function lf() {
       do
         o = e(o, i.action), i = i.next;
       while (i !== l);
-      ft(o, t.memoizedState) || (He = !0), t.memoizedState = o, t.baseQueue === null && (t.baseState = o), n.lastRenderedState = o;
+      dt(o, t.memoizedState) || (He = !0), t.memoizedState = o, t.baseQueue === null && (t.baseState = o), n.lastRenderedState = o;
     }
     return [o, r];
   }
   function ks() {
   }
   function xs(e, t) {
-    var n = fe, r = it(), l = t(), o = !ft(r.memoizedState, l);
+    var n = fe, r = it(), l = t(), o = !dt(r.memoizedState, l);
     if (o && (r.memoizedState = l, He = !0), r = r.queue, bo(Cs.bind(null, n, r, e), [e]), r.getSnapshot !== t || o || _e !== null && _e.memoizedState.tag & 1) {
       if (n.flags |= 2048, yr(9, Es.bind(null, n, r, l, t), void 0, null), ze === null) throw Error(s(349));
       un & 30 || Ss(n, t, l);
@@ -2977,14 +2977,14 @@ function lf() {
     e = e.value;
     try {
       var n = t();
-      return !ft(e, n);
+      return !dt(e, n);
     } catch {
       return !0;
     }
   }
   function zs(e) {
     var t = Pt(e, 1);
-    t !== null && vt(t, e, 1, -1);
+    t !== null && gt(t, e, 1, -1);
   }
   function Ps(e) {
     var t = xt();
@@ -3051,7 +3051,7 @@ function lf() {
     return r !== null && t !== null && Yo(t, r[1]) ? r[0] : (e = e(), n.memoizedState = [e, t], e);
   }
   function Fs(e, t, n) {
-    return un & 21 ? (ft(n, t) || (n = fu(), fe.lanes |= n, sn |= n, e.baseState = !0), t) : (e.baseState && (e.baseState = !1, He = !0), e.memoizedState = n);
+    return un & 21 ? (dt(n, t) || (n = fu(), fe.lanes |= n, sn |= n, e.baseState = !0), t) : (e.baseState && (e.baseState = !1, He = !0), e.memoizedState = n);
   }
   function Sd(e, t) {
     var n = te;
@@ -3072,7 +3072,7 @@ function lf() {
     if (n = { lane: r, action: n, hasEagerState: !1, eagerState: null, next: null }, As(e)) Us(t, n);
     else if (n = hs(e, t, n, r), n !== null) {
       var l = Ue();
-      vt(n, e, r, l), Vs(n, t, r);
+      gt(n, e, r, l), Vs(n, t, r);
     }
   }
   function Cd(e, t, n) {
@@ -3082,7 +3082,7 @@ function lf() {
       var o = e.alternate;
       if (e.lanes === 0 && (o === null || o.lanes === 0) && (o = t.lastRenderedReducer, o !== null)) try {
         var i = t.lastRenderedState, u = o(i, n);
-        if (l.hasEagerState = !0, l.eagerState = u, ft(u, i)) {
+        if (l.hasEagerState = !0, l.eagerState = u, dt(u, i)) {
           var c = t.interleaved;
           c === null ? (l.next = l, Wo(t)) : (l.next = c.next, c.next = l), t.interleaved = l;
           return;
@@ -3090,7 +3090,7 @@ function lf() {
       } catch {
       } finally {
       }
-      n = hs(e, t, l, r), n !== null && (l = Ue(), vt(n, e, r, l), Vs(n, t, r));
+      n = hs(e, t, l, r), n !== null && (l = Ue(), gt(n, e, r, l), Vs(n, t, r));
     }
   }
   function As(e) {
@@ -3157,7 +3157,7 @@ function lf() {
     var e = xt(), t = ze.identifierPrefix;
     if (ae) {
       var n = zt, r = _t;
-      n = (r & ~(1 << 32 - dt(r) - 1)).toString(32) + n, t = ":" + t + "R" + n, n = gr++, 0 < n && (t += "H" + n.toString(32)), t += ":";
+      n = (r & ~(1 << 32 - ct(r) - 1)).toString(32) + n, t = ":" + t + "R" + n, n = gr++, 0 < n && (t += "H" + n.toString(32)), t += ":";
     } else n = xd++, t = ":" + t + "r" + n.toString(32) + ":";
     return e.memoizedState = t;
   }, unstable_isNewReconciler: !1 }, zd = {
@@ -3196,7 +3196,7 @@ function lf() {
     var e = qo(vr)[0], t = it().memoizedState;
     return [e, t];
   }, useMutableSource: ks, useSyncExternalStore: xs, useId: Ds, unstable_isNewReconciler: !1 };
-  function mt(e, t) {
+  function pt(e, t) {
     if (e && e.defaultProps) {
       t = N({}, t), e = e.defaultProps;
       for (var n in e) t[n] === void 0 && (t[n] = e[n]);
@@ -3212,15 +3212,15 @@ function lf() {
   }, enqueueSetState: function(e, t, n) {
     e = e._reactInternals;
     var r = Ue(), l = Kt(e), o = Nt(r, l);
-    o.payload = t, n != null && (o.callback = n), t = $t(e, o, l), t !== null && (vt(t, e, l, r), al(t, e, l));
+    o.payload = t, n != null && (o.callback = n), t = $t(e, o, l), t !== null && (gt(t, e, l, r), al(t, e, l));
   }, enqueueReplaceState: function(e, t, n) {
     e = e._reactInternals;
     var r = Ue(), l = Kt(e), o = Nt(r, l);
-    o.tag = 1, o.payload = t, n != null && (o.callback = n), t = $t(e, o, l), t !== null && (vt(t, e, l, r), al(t, e, l));
+    o.tag = 1, o.payload = t, n != null && (o.callback = n), t = $t(e, o, l), t !== null && (gt(t, e, l, r), al(t, e, l));
   }, enqueueForceUpdate: function(e, t) {
     e = e._reactInternals;
     var n = Ue(), r = Kt(e), l = Nt(n, r);
-    l.tag = 2, t != null && (l.callback = t), t = $t(e, l, r), t !== null && (vt(t, e, r, n), al(t, e, r));
+    l.tag = 2, t != null && (l.callback = t), t = $t(e, l, r), t !== null && (gt(t, e, r, n), al(t, e, r));
   } };
   function Ws(e, t, n, r, l, o, i) {
     return e = e.stateNode, typeof e.shouldComponentUpdate == "function" ? e.shouldComponentUpdate(r, o, i) : t.prototype && t.prototype.isPureReactComponent ? !lr(n, r) || !lr(l, o) : !0;
@@ -3372,7 +3372,7 @@ Error generating stack: ` + o.message + `
       var w = t.memoizedState;
       i.state = w, cl(t, r, i, l), c = t.memoizedState, u !== r || w !== c || Be.current || Bt ? (typeof k == "function" && (ti(t, n, k, r), c = t.memoizedState), (u = Bt || Ws(t, n, u, r, w, c, h)) ? (x || typeof i.UNSAFE_componentWillMount != "function" && typeof i.componentWillMount != "function" || (typeof i.componentWillMount == "function" && i.componentWillMount(), typeof i.UNSAFE_componentWillMount == "function" && i.UNSAFE_componentWillMount()), typeof i.componentDidMount == "function" && (t.flags |= 4194308)) : (typeof i.componentDidMount == "function" && (t.flags |= 4194308), t.memoizedProps = r, t.memoizedState = c), i.props = r, i.state = c, i.context = h, r = u) : (typeof i.componentDidMount == "function" && (t.flags |= 4194308), r = !1);
     } else {
-      i = t.stateNode, gs(e, t), u = t.memoizedProps, h = t.type === t.elementType ? u : mt(t.type, u), i.props = h, x = t.pendingProps, w = i.context, c = n.contextType, typeof c == "object" && c !== null ? c = ot(c) : (c = $e(n) ? tn : je.current, c = zn(t, c));
+      i = t.stateNode, gs(e, t), u = t.memoizedProps, h = t.type === t.elementType ? u : pt(t.type, u), i.props = h, x = t.pendingProps, w = i.context, c = n.contextType, typeof c == "object" && c !== null ? c = ot(c) : (c = $e(n) ? tn : je.current, c = zn(t, c));
       var P = n.getDerivedStateFromProps;
       (k = typeof P == "function" || typeof i.getSnapshotBeforeUpdate == "function") || typeof i.UNSAFE_componentWillReceiveProps != "function" && typeof i.componentWillReceiveProps != "function" || (u !== x || w !== c) && $s(t, i, r, c), Bt = !1, w = t.memoizedState, i.state = w, cl(t, r, i, l);
       var R = t.memoizedState;
@@ -3463,11 +3463,11 @@ Error generating stack: ` + o.message + `
           default:
             l = 0;
         }
-        l = l & (r.suspendedLanes | i) ? 0 : l, l !== 0 && l !== o.retryLane && (o.retryLane = l, Pt(e, l), vt(r, e, l, -1));
+        l = l & (r.suspendedLanes | i) ? 0 : l, l !== 0 && l !== o.retryLane && (o.retryLane = l, Pt(e, l), gt(r, e, l, -1));
       }
       return _i(), r = ri(Error(s(421))), yl(e, t, i, r);
     }
-    return l.data === "$?" ? (t.flags |= 128, t.child = e.child, t = $d.bind(null, e), l._reactRetry = t, null) : (e = o.treeContext, et = At(l.nextSibling), be = t, ae = !0, pt = null, e !== null && (rt[lt++] = _t, rt[lt++] = zt, rt[lt++] = nn, _t = e.id, zt = e.overflow, nn = t), t = ai(t, r.children), t.flags |= 4096, t);
+    return l.data === "$?" ? (t.flags |= 128, t.child = e.child, t = $d.bind(null, e), l._reactRetry = t, null) : (e = o.treeContext, et = At(l.nextSibling), be = t, ae = !0, ft = null, e !== null && (rt[lt++] = _t, rt[lt++] = zt, rt[lt++] = nn, _t = e.id, zt = e.overflow, nn = t), t = ai(t, r.children), t.flags |= 4096, t);
   }
   function la(e, t, n) {
     e.lanes |= t;
@@ -3665,7 +3665,7 @@ Error generating stack: ` + o.message + `
       case 1:
         return $e(t.type) && el(), Ie(t), null;
       case 3:
-        return r = t.stateNode, jn(), ie(Be), ie(je), Go(), r.pendingContext && (r.context = r.pendingContext, r.pendingContext = null), (e === null || e.child === null) && (ol(t) ? t.flags |= 4 : e === null || e.memoizedState.isDehydrated && !(t.flags & 256) || (t.flags |= 1024, pt !== null && (Si(pt), pt = null))), di(e, t), Ie(t), null;
+        return r = t.stateNode, jn(), ie(Be), ie(je), Go(), r.pendingContext && (r.context = r.pendingContext, r.pendingContext = null), (e === null || e.child === null) && (ol(t) ? t.flags |= 4 : e === null || e.memoizedState.isDehydrated && !(t.flags & 256) || (t.flags |= 1024, ft !== null && (Si(ft), ft = null))), di(e, t), Ie(t), null;
       case 5:
         Ho(t);
         var l = on(mr.current);
@@ -3854,7 +3854,7 @@ Error generating stack: ` + o.message + `
               o[wt] = t;
             } else Tn(), !(t.flags & 128) && (t.memoizedState = null), t.flags |= 4;
             Ie(t), o = !1;
-          } else pt !== null && (Si(pt), pt = null), o = !0;
+          } else ft !== null && (Si(ft), ft = null), o = !0;
           if (!o) return t.flags & 65536 ? t : null;
         }
         return t.flags & 128 ? (t.lanes = n, t) : (r = r !== null, r !== (e !== null && e.memoizedState !== null) && r && (t.child.flags |= 8192, t.mode & 1 && (e === null || de.current & 1 ? Se === 0 && (Se = 3) : _i())), t.updateQueue !== null && (t.flags |= 4), Ie(t), null);
@@ -3985,7 +3985,7 @@ Error generating stack: ` + o.message + `
             break;
           case 1:
             if (R !== null) {
-              var L = R.memoizedProps, ge = R.memoizedState, p = t.stateNode, d = p.getSnapshotBeforeUpdate(t.elementType === t.type ? L : mt(t.type, L), ge);
+              var L = R.memoizedProps, ge = R.memoizedState, p = t.stateNode, d = p.getSnapshotBeforeUpdate(t.elementType === t.type ? L : pt(t.type, L), ge);
               p.__reactInternalSnapshotBeforeUpdate = d;
             }
             break;
@@ -4081,7 +4081,7 @@ Error generating stack: ` + o.message + `
     if (r === 5 || r === 6) e = e.stateNode, t ? n.insertBefore(e, t) : n.appendChild(e);
     else if (r !== 4 && (e = e.child, e !== null)) for (hi(e, t, n), e = e.sibling; e !== null; ) hi(e, t, n), e = e.sibling;
   }
-  var Te = null, ht = !1;
+  var Te = null, mt = !1;
   function Ht(e, t, n) {
     for (n = n.child; n !== null; ) pa(e, t, n), n = n.sibling;
   }
@@ -4094,14 +4094,14 @@ Error generating stack: ` + o.message + `
       case 5:
         Fe || In(n, t);
       case 6:
-        var r = Te, l = ht;
-        Te = null, Ht(e, t, n), Te = r, ht = l, Te !== null && (ht ? (e = Te, n = n.stateNode, e.nodeType === 8 ? e.parentNode.removeChild(n) : e.removeChild(n)) : Te.removeChild(n.stateNode));
+        var r = Te, l = mt;
+        Te = null, Ht(e, t, n), Te = r, mt = l, Te !== null && (mt ? (e = Te, n = n.stateNode, e.nodeType === 8 ? e.parentNode.removeChild(n) : e.removeChild(n)) : Te.removeChild(n.stateNode));
         break;
       case 18:
-        Te !== null && (ht ? (e = Te, n = n.stateNode, e.nodeType === 8 ? No(e.parentNode, n) : e.nodeType === 1 && No(e, n), qn(e)) : No(Te, n.stateNode));
+        Te !== null && (mt ? (e = Te, n = n.stateNode, e.nodeType === 8 ? No(e.parentNode, n) : e.nodeType === 1 && No(e, n), qn(e)) : No(Te, n.stateNode));
         break;
       case 4:
-        r = Te, l = ht, Te = n.stateNode.containerInfo, ht = !0, Ht(e, t, n), Te = r, ht = l;
+        r = Te, l = mt, Te = n.stateNode.containerInfo, mt = !0, Ht(e, t, n), Te = r, mt = l;
         break;
       case 0:
       case 11:
@@ -4145,7 +4145,7 @@ Error generating stack: ` + o.message + `
       });
     }
   }
-  function gt(e, t) {
+  function ht(e, t) {
     var n = t.deletions;
     if (n !== null) for (var r = 0; r < n.length; r++) {
       var l = n[r];
@@ -4154,19 +4154,19 @@ Error generating stack: ` + o.message + `
         e: for (; u !== null; ) {
           switch (u.tag) {
             case 5:
-              Te = u.stateNode, ht = !1;
+              Te = u.stateNode, mt = !1;
               break e;
             case 3:
-              Te = u.stateNode.containerInfo, ht = !0;
+              Te = u.stateNode.containerInfo, mt = !0;
               break e;
             case 4:
-              Te = u.stateNode.containerInfo, ht = !0;
+              Te = u.stateNode.containerInfo, mt = !0;
               break e;
           }
           u = u.return;
         }
         if (Te === null) throw Error(s(160));
-        pa(o, i, l), Te = null, ht = !1;
+        pa(o, i, l), Te = null, mt = !1;
         var c = l.alternate;
         c !== null && (c.return = null), l.return = null;
       } catch (h) {
@@ -4182,7 +4182,7 @@ Error generating stack: ` + o.message + `
       case 11:
       case 14:
       case 15:
-        if (gt(t, e), St(e), r & 4) {
+        if (ht(t, e), St(e), r & 4) {
           try {
             kr(3, e, e.return), xl(3, e);
           } catch (L) {
@@ -4196,10 +4196,10 @@ Error generating stack: ` + o.message + `
         }
         break;
       case 1:
-        gt(t, e), St(e), r & 512 && n !== null && In(n, n.return);
+        ht(t, e), St(e), r & 512 && n !== null && In(n, n.return);
         break;
       case 5:
-        if (gt(t, e), St(e), r & 512 && n !== null && In(n, n.return), e.flags & 32) {
+        if (ht(t, e), St(e), r & 512 && n !== null && In(n, n.return), e.flags & 32) {
           var l = e.stateNode;
           try {
             Wn(l, "");
@@ -4241,7 +4241,7 @@ Error generating stack: ` + o.message + `
         }
         break;
       case 6:
-        if (gt(t, e), St(e), r & 4) {
+        if (ht(t, e), St(e), r & 4) {
           if (e.stateNode === null) throw Error(s(162));
           l = e.stateNode, o = e.memoizedProps;
           try {
@@ -4252,20 +4252,20 @@ Error generating stack: ` + o.message + `
         }
         break;
       case 3:
-        if (gt(t, e), St(e), r & 4 && n !== null && n.memoizedState.isDehydrated) try {
+        if (ht(t, e), St(e), r & 4 && n !== null && n.memoizedState.isDehydrated) try {
           qn(t.containerInfo);
         } catch (L) {
           pe(e, e.return, L);
         }
         break;
       case 4:
-        gt(t, e), St(e);
+        ht(t, e), St(e);
         break;
       case 13:
-        gt(t, e), St(e), l = e.child, l.flags & 8192 && (o = l.memoizedState !== null, l.stateNode.isHidden = o, !o || l.alternate !== null && l.alternate.memoizedState !== null || (yi = he())), r & 4 && ma(e);
+        ht(t, e), St(e), l = e.child, l.flags & 8192 && (o = l.memoizedState !== null, l.stateNode.isHidden = o, !o || l.alternate !== null && l.alternate.memoizedState !== null || (yi = he())), r & 4 && ma(e);
         break;
       case 22:
-        if (k = n !== null && n.memoizedState !== null, e.mode & 1 ? (Fe = (h = Fe) || k, gt(t, e), Fe = h) : gt(t, e), St(e), r & 8192) {
+        if (k = n !== null && n.memoizedState !== null, e.mode & 1 ? (Fe = (h = Fe) || k, ht(t, e), Fe = h) : ht(t, e), St(e), r & 8192) {
           if (h = e.memoizedState !== null, (e.stateNode.isHidden = h) && !k && e.mode & 1) for (T = e, k = e.child; k !== null; ) {
             for (x = T = k; T !== null; ) {
               switch (w = T, P = w.child, w.tag) {
@@ -4330,12 +4330,12 @@ Error generating stack: ` + o.message + `
         }
         break;
       case 19:
-        gt(t, e), St(e), r & 4 && ma(e);
+        ht(t, e), St(e), r & 4 && ma(e);
         break;
       case 21:
         break;
       default:
-        gt(
+        ht(
           t,
           e
         ), St(e);
@@ -4413,7 +4413,7 @@ Error generating stack: ` + o.message + `
               var r = t.stateNode;
               if (t.flags & 4 && !Fe) if (n === null) r.componentDidMount();
               else {
-                var l = t.elementType === t.type ? n.memoizedProps : mt(t.type, n.memoizedProps);
+                var l = t.elementType === t.type ? n.memoizedProps : pt(t.type, n.memoizedProps);
                 r.componentDidUpdate(l, n.memoizedState, r.__reactInternalSnapshotBeforeUpdate);
               }
               var o = t.updateQueue;
@@ -4570,7 +4570,7 @@ Error generating stack: ` + o.message + `
   function Kt(e) {
     return e.mode & 1 ? Z & 2 && Re !== 0 ? Re & -Re : kd.transition !== null ? (Nl === 0 && (Nl = fu()), Nl) : (e = te, e !== 0 || (e = window.event, e = e === void 0 ? 16 : xu(e.type)), e) : 1;
   }
-  function vt(e, t, n, r) {
+  function gt(e, t, n, r) {
     if (50 < Er) throw Er = 0, ki = null, Error(s(185));
     Kn(e, n, r), (!(Z & 2) || e !== ze) && (e === ze && (!(Z & 2) && (El |= n), Se === 4 && Yt(e, Re)), Ge(e, r), n === 1 && Z === 0 && !(t.mode & 1) && (Dn = he() + 500, nl && Wt()));
   }
@@ -4655,7 +4655,7 @@ Error generating stack: ` + o.message + `
           case 4:
             if (Yt(e, r), (r & 4194240) === r) break;
             for (t = e.eventTimes, l = -1; 0 < r; ) {
-              var i = 31 - dt(r);
+              var i = 31 - ct(r);
               o = 1 << i, i = t[i], i > l && (l = i), r &= ~o;
             }
             if (r = l, r = he() - r, r = (120 > r ? 120 : 480 > r ? 480 : 1080 > r ? 1080 : 1920 > r ? 1920 : 3e3 > r ? 3e3 : 4320 > r ? 4320 : 1960 * Dd(r / 1960)) - r, 10 < r) {
@@ -4689,7 +4689,7 @@ Error generating stack: ` + o.message + `
           var l = n[r], o = l.getSnapshot;
           l = l.value;
           try {
-            if (!ft(o(), l)) return !1;
+            if (!dt(o(), l)) return !1;
           } catch {
             return !1;
           }
@@ -4709,7 +4709,7 @@ Error generating stack: ` + o.message + `
   }
   function Yt(e, t) {
     for (t &= ~vi, t &= ~El, e.suspendedLanes |= t, e.pingedLanes &= ~t, e = e.expirationTimes; 0 < t; ) {
-      var n = 31 - dt(t), r = 1 << n;
+      var n = 31 - ct(t), r = 1 << n;
       e[n] = -1, t &= ~r;
     }
   }
@@ -5141,7 +5141,7 @@ Error generating stack: ` + o.message + `
       case 16:
         r = t.elementType;
         e: {
-          switch (wl(e, t), e = t.pendingProps, l = r._init, r = l(r._payload), t.type = r, l = t.tag = Gd(r), e = mt(r, e), l) {
+          switch (wl(e, t), e = t.pendingProps, l = r._init, r = l(r._payload), t.type = r, l = t.tag = Gd(r), e = pt(r, e), l) {
             case 0:
               t = oi(null, t, r, e, n);
               break e;
@@ -5152,7 +5152,7 @@ Error generating stack: ` + o.message + `
               t = Xs(null, t, r, e, n);
               break e;
             case 14:
-              t = Zs(null, t, r, mt(r.type, e), n);
+              t = Zs(null, t, r, pt(r.type, e), n);
               break e;
           }
           throw Error(s(
@@ -5163,9 +5163,9 @@ Error generating stack: ` + o.message + `
         }
         return t;
       case 0:
-        return r = t.type, l = t.pendingProps, l = t.elementType === r ? l : mt(r, l), oi(e, t, r, l, n);
+        return r = t.type, l = t.pendingProps, l = t.elementType === r ? l : pt(r, l), oi(e, t, r, l, n);
       case 1:
-        return r = t.type, l = t.pendingProps, l = t.elementType === r ? l : mt(r, l), ea(e, t, r, l, n);
+        return r = t.type, l = t.pendingProps, l = t.elementType === r ? l : pt(r, l), ea(e, t, r, l, n);
       case 3:
         e: {
           if (ta(t), e === null) throw Error(s(387));
@@ -5177,7 +5177,7 @@ Error generating stack: ` + o.message + `
           } else if (r !== l) {
             l = On(Error(s(424)), t), t = na(e, t, r, n, l);
             break e;
-          } else for (et = At(t.stateNode.containerInfo.firstChild), be = t, ae = !0, pt = null, n = ms(t, null, r, n), t.child = n; n; ) n.flags = n.flags & -3 | 4096, n = n.sibling;
+          } else for (et = At(t.stateNode.containerInfo.firstChild), be = t, ae = !0, ft = null, n = ms(t, null, r, n), t.child = n; n; ) n.flags = n.flags & -3 | 4096, n = n.sibling;
           else {
             if (Tn(), r === l) {
               t = Tt(e, t, n);
@@ -5197,7 +5197,7 @@ Error generating stack: ` + o.message + `
       case 4:
         return $o(t, t.stateNode.containerInfo), r = t.pendingProps, e === null ? t.child = Rn(t, null, r, n) : Ae(e, t, r, n), t.child;
       case 11:
-        return r = t.type, l = t.pendingProps, l = t.elementType === r ? l : mt(r, l), Xs(e, t, r, l, n);
+        return r = t.type, l = t.pendingProps, l = t.elementType === r ? l : pt(r, l), Xs(e, t, r, l, n);
       case 7:
         return Ae(e, t, t.pendingProps, n), t.child;
       case 8:
@@ -5206,7 +5206,7 @@ Error generating stack: ` + o.message + `
         return Ae(e, t, t.pendingProps.children, n), t.child;
       case 10:
         e: {
-          if (r = t.type._context, l = t.pendingProps, o = t.memoizedProps, i = l.value, re(ul, r._currentValue), r._currentValue = i, o !== null) if (ft(o.value, i)) {
+          if (r = t.type._context, l = t.pendingProps, o = t.memoizedProps, i = l.value, re(ul, r._currentValue), r._currentValue = i, o !== null) if (dt(o.value, i)) {
             if (o.children === l.children && !Be.current) {
               t = Tt(e, t, n);
               break e;
@@ -5260,11 +5260,11 @@ Error generating stack: ` + o.message + `
       case 9:
         return l = t.type, r = t.pendingProps.children, Mn(t, n), l = ot(l), r = r(l), t.flags |= 1, Ae(e, t, r, n), t.child;
       case 14:
-        return r = t.type, l = mt(r, t.pendingProps), l = mt(r.type, l), Zs(e, t, r, l, n);
+        return r = t.type, l = pt(r, t.pendingProps), l = pt(r.type, l), Zs(e, t, r, l, n);
       case 15:
         return Js(e, t, t.type, t.pendingProps, n);
       case 17:
-        return r = t.type, l = t.pendingProps, l = t.elementType === r ? l : mt(r, l), wl(e, t), t.tag = 1, $e(r) ? (e = !0, tl(t)) : e = !1, Mn(t, n), Bs(t, r, l), ni(t, r, l, n), ii(null, t, r, !0, e, n);
+        return r = t.type, l = t.pendingProps, l = t.elementType === r ? l : pt(r, l), wl(e, t), t.tag = 1, $e(r) ? (e = !0, tl(t)) : e = !1, Mn(t, n), Bs(t, r, l), ni(t, r, l, n), ii(null, t, r, !0, e, n);
       case 19:
         return oa(e, t, n);
       case 22:
@@ -5319,7 +5319,7 @@ Error generating stack: ` + o.message + `
           case Xe:
             i = 10;
             break e;
-          case ct:
+          case at:
             i = 9;
             break e;
           case X:
@@ -5390,7 +5390,7 @@ Error generating stack: ` + o.message + `
   }
   function Ml(e, t, n, r) {
     var l = t.current, o = Ue(), i = Kt(l);
-    return n = Ra(n), t.context === null ? t.context = n : t.pendingContext = n, t = Nt(o, i), t.payload = { element: e }, r = r === void 0 ? null : r, r !== null && (t.callback = r), e = $t(l, t, i), e !== null && (vt(e, l, i, o), al(e, l, i)), i;
+    return n = Ra(n), t.context === null ? t.context = n : t.pendingContext = n, t = Nt(o, i), t.payload = { element: e }, r = r === void 0 ? null : r, r !== null && (t.callback = r), e = $t(l, t, i), e !== null && (gt(e, l, i, o), al(e, l, i)), i;
   }
   function jl(e) {
     if (e = e.current, !e.child) return null;
@@ -5506,7 +5506,7 @@ Error generating stack: ` + o.message + `
           var r = Pt(e, 1);
           if (r !== null) {
             var l = Ue();
-            vt(r, e, 1, l);
+            gt(r, e, 1, l);
           }
         }), Ri(e, 1);
     }
@@ -5515,7 +5515,7 @@ Error generating stack: ` + o.message + `
       var t = Pt(e, 134217728);
       if (t !== null) {
         var n = Ue();
-        vt(t, e, 134217728, n);
+        gt(t, e, 134217728, n);
       }
       Ri(e, 134217728);
     }
@@ -5524,7 +5524,7 @@ Error generating stack: ` + o.message + `
       var t = Kt(e), n = Pt(e, t);
       if (n !== null) {
         var r = Ue();
-        vt(n, e, t, r);
+        gt(n, e, t, r);
       }
       Ri(e, t);
     }
@@ -5624,7 +5624,7 @@ function Ya() {
 Ya(), Ka.exports = lf();
 var of = Ka.exports, Wa = of;
 Fi.createRoot = Wa.createRoot, Fi.hydrateRoot = Wa.hydrateRoot;
-const uf = ".widget{background-color:#f9f9f9;border:1px solid #e6e6e6;border-radius:4px;padding:10px;margin-bottom:10px;box-shadow:0 0 10px #0000001a}", sf = '*,:before,:after{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}:before,:after{--tw-content: ""}html,:host{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dl,dd,h1,h2,h3,h4,h5,h6,hr,figure,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}ol,ul,menu{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}button,[role=button]{cursor:pointer}:disabled{cursor:default}img,svg,video,canvas,audio,iframe,embed,object{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}:root{--background: 0 0% 100%;--foreground: 222.2 84% 4.9%;--card: 0 0% 100%;--card-foreground: 222.2 84% 4.9%;--popover: 0 0% 100%;--popover-foreground: 222.2 84% 4.9%;--primary: 222.2 47.4% 11.2%;--primary-foreground: 210 40% 98%;--secondary: 210 40% 96.1%;--secondary-foreground: 222.2 47.4% 11.2%;--muted: 210 40% 96.1%;--muted-foreground: 215.4 16.3% 46.9%;--accent: 210 40% 96.1%;--accent-foreground: 222.2 47.4% 11.2%;--destructive: 0 84.2% 60.2%;--destructive-foreground: 210 40% 98%;--border: 214.3 31.8% 91.4%;--input: 214.3 31.8% 91.4%;--ring: 222.2 84% 4.9%;--radius: .5rem}*{border-color:hsl(var(--border))}body{background-color:hsl(var(--background));color:hsl(var(--foreground))}*,:before,:after{--tw-border-spacing-x: 0;--tw-border-spacing-y: 0;--tw-translate-x: 0;--tw-translate-y: 0;--tw-rotate: 0;--tw-skew-x: 0;--tw-skew-y: 0;--tw-scale-x: 1;--tw-scale-y: 1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness: proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width: 0px;--tw-ring-offset-color: #fff;--tw-ring-color: rgb(59 130 246 / .5);--tw-ring-offset-shadow: 0 0 #0000;--tw-ring-shadow: 0 0 #0000;--tw-shadow: 0 0 #0000;--tw-shadow-colored: 0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x: 0;--tw-border-spacing-y: 0;--tw-translate-x: 0;--tw-translate-y: 0;--tw-rotate: 0;--tw-skew-x: 0;--tw-skew-y: 0;--tw-scale-x: 1;--tw-scale-y: 1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness: proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width: 0px;--tw-ring-offset-color: #fff;--tw-ring-color: rgb(59 130 246 / .5);--tw-ring-offset-shadow: 0 0 #0000;--tw-ring-shadow: 0 0 #0000;--tw-shadow: 0 0 #0000;--tw-shadow-colored: 0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }.inline{display:inline}.inline-flex{display:inline-flex}.h-10{height:2.5rem}.h-11{height:2.75rem}.h-9{height:2.25rem}.w-10{width:2.5rem}.items-center{align-items:center}.justify-center{justify-content:center}.whitespace-nowrap{white-space:nowrap}.rounded-md{border-radius:calc(var(--radius) - 2px)}.border{border-width:1px}.border-input{border-color:hsl(var(--input))}.bg-background{background-color:hsl(var(--background))}.bg-destructive{background-color:hsl(var(--destructive))}.bg-primary{background-color:hsl(var(--primary))}.bg-secondary{background-color:hsl(var(--secondary))}.bg-slate-800{--tw-bg-opacity: 1;background-color:rgb(30 41 59 / var(--tw-bg-opacity))}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-8{padding-left:2rem;padding-right:2rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.text-sm{font-size:.875rem;line-height:1.25rem}.font-medium{font-weight:500}.text-destructive-foreground{color:hsl(var(--destructive-foreground))}.text-primary{color:hsl(var(--primary))}.text-primary-foreground{color:hsl(var(--primary-foreground))}.text-secondary-foreground{color:hsl(var(--secondary-foreground))}.underline-offset-4{text-underline-offset:4px}.outline{outline-style:solid}.ring-offset-background{--tw-ring-offset-color: hsl(var(--background))}.transition-colors{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}@keyframes enter{0%{opacity:var(--tw-enter-opacity, 1);transform:translate3d(var(--tw-enter-translate-x, 0),var(--tw-enter-translate-y, 0),0) scale3d(var(--tw-enter-scale, 1),var(--tw-enter-scale, 1),var(--tw-enter-scale, 1)) rotate(var(--tw-enter-rotate, 0))}}@keyframes exit{to{opacity:var(--tw-exit-opacity, 1);transform:translate3d(var(--tw-exit-translate-x, 0),var(--tw-exit-translate-y, 0),0) scale3d(var(--tw-exit-scale, 1),var(--tw-exit-scale, 1),var(--tw-exit-scale, 1)) rotate(var(--tw-exit-rotate, 0))}}.hover\\:bg-accent:hover{background-color:hsl(var(--accent))}.hover\\:bg-destructive\\/90:hover{background-color:hsl(var(--destructive) / .9)}.hover\\:bg-primary\\/90:hover{background-color:hsl(var(--primary) / .9)}.hover\\:bg-secondary\\/80:hover{background-color:hsl(var(--secondary) / .8)}.hover\\:text-accent-foreground:hover{color:hsl(var(--accent-foreground))}.hover\\:underline:hover{text-decoration-line:underline}.focus-visible\\:outline-none:focus-visible{outline:2px solid transparent;outline-offset:2px}.focus-visible\\:ring-2:focus-visible{--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow, 0 0 #0000)}.focus-visible\\:ring-ring:focus-visible{--tw-ring-color: hsl(var(--ring))}.focus-visible\\:ring-offset-2:focus-visible{--tw-ring-offset-width: 2px}.disabled\\:pointer-events-none:disabled{pointer-events:none}.disabled\\:opacity-50:disabled{opacity:.5}';
+const uf = ".widget{background-color:#f9f9f9;border:1px solid #e6e6e6;border-radius:4px;padding:10px;margin-bottom:10px;box-shadow:0 0 10px #0000001a}", sf = '*,:before,:after{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}:before,:after{--tw-content: ""}html,:host{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dl,dd,h1,h2,h3,h4,h5,h6,hr,figure,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}ol,ul,menu{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}button,[role=button]{cursor:pointer}:disabled{cursor:default}img,svg,video,canvas,audio,iframe,embed,object{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}:widget{--background: 0 0% 100%;--foreground: 222.2 84% 4.9%;--card: 0 0% 100%;--card-foreground: 222.2 84% 4.9%;--popover: 0 0% 100%;--popover-foreground: 222.2 84% 4.9%;--primary: 222.2 47.4% 11.2%;--primary-foreground: 210 40% 98%;--secondary: 210 40% 96.1%;--secondary-foreground: 222.2 47.4% 11.2%;--muted: 210 40% 96.1%;--muted-foreground: 215.4 16.3% 46.9%;--accent: 210 40% 96.1%;--accent-foreground: 222.2 47.4% 11.2%;--destructive: 0 84.2% 60.2%;--destructive-foreground: 210 40% 98%;--border: 214.3 31.8% 91.4%;--input: 214.3 31.8% 91.4%;--ring: 222.2 84% 4.9%;--radius: .5rem}*{border-color:hsl(var(--border))}body{background-color:hsl(var(--background));color:hsl(var(--foreground))}*,:before,:after{--tw-border-spacing-x: 0;--tw-border-spacing-y: 0;--tw-translate-x: 0;--tw-translate-y: 0;--tw-rotate: 0;--tw-skew-x: 0;--tw-skew-y: 0;--tw-scale-x: 1;--tw-scale-y: 1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness: proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width: 0px;--tw-ring-offset-color: #fff;--tw-ring-color: rgb(59 130 246 / .5);--tw-ring-offset-shadow: 0 0 #0000;--tw-ring-shadow: 0 0 #0000;--tw-shadow: 0 0 #0000;--tw-shadow-colored: 0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x: 0;--tw-border-spacing-y: 0;--tw-translate-x: 0;--tw-translate-y: 0;--tw-rotate: 0;--tw-skew-x: 0;--tw-skew-y: 0;--tw-scale-x: 1;--tw-scale-y: 1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness: proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width: 0px;--tw-ring-offset-color: #fff;--tw-ring-color: rgb(59 130 246 / .5);--tw-ring-offset-shadow: 0 0 #0000;--tw-ring-shadow: 0 0 #0000;--tw-shadow: 0 0 #0000;--tw-shadow-colored: 0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }.inline{display:inline}.inline-flex{display:inline-flex}.h-10{height:2.5rem}.h-11{height:2.75rem}.h-9{height:2.25rem}.w-10{width:2.5rem}.items-center{align-items:center}.justify-center{justify-content:center}.whitespace-nowrap{white-space:nowrap}.rounded-md{border-radius:calc(var(--radius) - 2px)}.border{border-width:1px}.border-input{border-color:hsl(var(--input))}.bg-background{background-color:hsl(var(--background))}.bg-destructive{background-color:hsl(var(--destructive))}.bg-primary{background-color:hsl(var(--primary))}.bg-secondary{background-color:hsl(var(--secondary))}.bg-slate-800{--tw-bg-opacity: 1;background-color:rgb(30 41 59 / var(--tw-bg-opacity))}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-8{padding-left:2rem;padding-right:2rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.text-sm{font-size:.875rem;line-height:1.25rem}.font-medium{font-weight:500}.text-destructive-foreground{color:hsl(var(--destructive-foreground))}.text-primary{color:hsl(var(--primary))}.text-primary-foreground{color:hsl(var(--primary-foreground))}.text-secondary-foreground{color:hsl(var(--secondary-foreground))}.underline-offset-4{text-underline-offset:4px}.outline{outline-style:solid}.ring-offset-background{--tw-ring-offset-color: hsl(var(--background))}.transition-colors{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}@keyframes enter{0%{opacity:var(--tw-enter-opacity, 1);transform:translate3d(var(--tw-enter-translate-x, 0),var(--tw-enter-translate-y, 0),0) scale3d(var(--tw-enter-scale, 1),var(--tw-enter-scale, 1),var(--tw-enter-scale, 1)) rotate(var(--tw-enter-rotate, 0))}}@keyframes exit{to{opacity:var(--tw-exit-opacity, 1);transform:translate3d(var(--tw-exit-translate-x, 0),var(--tw-exit-translate-y, 0),0) scale3d(var(--tw-exit-scale, 1),var(--tw-exit-scale, 1),var(--tw-exit-scale, 1)) rotate(var(--tw-exit-rotate, 0))}}.hover\\:bg-accent:hover{background-color:hsl(var(--accent))}.hover\\:bg-destructive\\/90:hover{background-color:hsl(var(--destructive) / .9)}.hover\\:bg-primary\\/90:hover{background-color:hsl(var(--primary) / .9)}.hover\\:bg-secondary\\/80:hover{background-color:hsl(var(--secondary) / .8)}.hover\\:text-accent-foreground:hover{color:hsl(var(--accent-foreground))}.hover\\:underline:hover{text-decoration-line:underline}.focus-visible\\:outline-none:focus-visible{outline:2px solid transparent;outline-offset:2px}.focus-visible\\:ring-2:focus-visible{--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow, 0 0 #0000)}.focus-visible\\:ring-ring:focus-visible{--tw-ring-color: hsl(var(--ring))}.focus-visible\\:ring-offset-2:focus-visible{--tw-ring-offset-width: 2px}.disabled\\:pointer-events-none:disabled{pointer-events:none}.disabled\\:opacity-50:disabled{opacity:.5}';
 var Ye = Ui();
 function af(a, g) {
   typeof a == "function" ? a(g) : a != null && (a.current = g);
@@ -5636,9 +5636,9 @@ var Xa = Ye.forwardRef((a, g) => {
   const { children: s, ...v } = a, _ = Ye.Children.toArray(s), E = _.find(ff);
   if (E) {
     const z = E.props.children, j = _.map((I) => I === E ? Ye.Children.count(z) > 1 ? Ye.Children.only(null) : Ye.isValidElement(z) ? z.props.children : null : I);
-    return /* @__PURE__ */ at.jsx(Di, { ...v, ref: g, children: Ye.isValidElement(z) ? Ye.cloneElement(z, void 0, j) : null });
+    return /* @__PURE__ */ vt.jsx(Di, { ...v, ref: g, children: Ye.isValidElement(z) ? Ye.cloneElement(z, void 0, j) : null });
   }
-  return /* @__PURE__ */ at.jsx(Di, { ...v, ref: g, children: s });
+  return /* @__PURE__ */ vt.jsx(Di, { ...v, ref: g, children: s });
 });
 Xa.displayName = "Slot";
 var Di = Ye.forwardRef((a, g) => {
@@ -5654,7 +5654,7 @@ var Di = Ye.forwardRef((a, g) => {
   return Ye.Children.count(s) > 1 ? Ye.Children.only(null) : null;
 });
 Di.displayName = "SlotClone";
-var df = ({ children: a }) => /* @__PURE__ */ at.jsx(at.Fragment, { children: a });
+var df = ({ children: a }) => /* @__PURE__ */ vt.jsx(vt.Fragment, { children: a });
 function ff(a) {
   return Ye.isValidElement(a) && a.type === df;
 }
@@ -6030,7 +6030,7 @@ function Kf(a) {
   return Df.test(a);
 }
 function Yf() {
-  const a = ue("colors"), g = ue("spacing"), s = ue("blur"), v = ue("brightness"), _ = ue("borderColor"), E = ue("borderRadius"), z = ue("borderSpacing"), j = ue("borderWidth"), I = ue("contrast"), U = ue("grayscale"), $ = ue("hueRotate"), B = ue("invert"), H = ue("gap"), ce = ue("gradientColorStops"), me = ue("gradientColorStopPositions"), V = ue("inset"), W = ue("margin"), Ee = ue("opacity"), ve = ue("padding"), Ve = ue("saturate"), ye = ue("scale"), We = ue("sepia"), Ce = ue("skew"), Ne = ue("space"), De = ue("translate"), nt = () => ["auto", "contain", "none"], Xe = () => ["auto", "hidden", "clip", "visible", "scroll"], ct = () => ["auto", Q, g], X = () => [Q, g], Le = () => ["", Lt, Jt], Me = () => ["auto", pn, Q], Ze = () => ["bottom", "center", "left", "left-bottom", "left-top", "right", "right-bottom", "right-top", "top"], ke = () => ["solid", "dashed", "dotted", "double", "none"], le = () => ["normal", "multiply", "screen", "overlay", "darken", "lighten", "color-dodge", "color-burn", "hard-light", "soft-light", "difference", "exclusion", "hue", "saturation", "color", "luminosity"], C = () => ["start", "end", "center", "between", "around", "evenly", "stretch"], O = () => ["", "0", Q], N = () => ["auto", "avoid", "all", "avoid-page", "page", "left", "right", "column"], f = () => [pn, Al], y = () => [pn, Q];
+  const a = ue("colors"), g = ue("spacing"), s = ue("blur"), v = ue("brightness"), _ = ue("borderColor"), E = ue("borderRadius"), z = ue("borderSpacing"), j = ue("borderWidth"), I = ue("contrast"), U = ue("grayscale"), $ = ue("hueRotate"), B = ue("invert"), H = ue("gap"), ce = ue("gradientColorStops"), me = ue("gradientColorStopPositions"), V = ue("inset"), W = ue("margin"), Ee = ue("opacity"), ve = ue("padding"), Ve = ue("saturate"), ye = ue("scale"), We = ue("sepia"), Ce = ue("skew"), Ne = ue("space"), De = ue("translate"), nt = () => ["auto", "contain", "none"], Xe = () => ["auto", "hidden", "clip", "visible", "scroll"], at = () => ["auto", Q, g], X = () => [Q, g], Le = () => ["", Lt, Jt], Me = () => ["auto", pn, Q], Ze = () => ["bottom", "center", "left", "left-bottom", "left-top", "right", "right-bottom", "right-top", "top"], ke = () => ["solid", "dashed", "dotted", "double", "none"], le = () => ["normal", "multiply", "screen", "overlay", "darken", "lighten", "color-dodge", "color-burn", "hard-light", "soft-light", "difference", "exclusion", "hue", "saturation", "color", "luminosity"], C = () => ["start", "end", "center", "between", "around", "evenly", "stretch"], O = () => ["", "0", Q], N = () => ["auto", "avoid", "all", "avoid-page", "page", "left", "right", "column"], f = () => [pn, Al], y = () => [pn, Q];
   return {
     cacheSize: 500,
     separator: ":",
@@ -6050,8 +6050,8 @@ function Yf() {
       gap: X(),
       gradientColorStops: [a],
       gradientColorStopPositions: [Af, Jt],
-      inset: ct(),
-      margin: ct(),
+      inset: at(),
+      margin: at(),
       opacity: f(),
       padding: X(),
       saturate: f(),
@@ -6283,7 +6283,7 @@ function Yf() {
        * @see https://tailwindcss.com/docs/flex-basis
        */
       basis: [{
-        basis: ct()
+        basis: at()
       }],
       /**
        * Flex Direction
@@ -8075,7 +8075,7 @@ const Jf = gf(
   }
 ), rc = Ye.forwardRef(({ className: a, variant: g, size: s, asChild: v = !1, ..._ }, E) => {
   const z = v ? Xa : "button";
-  return /* @__PURE__ */ at.jsx(
+  return /* @__PURE__ */ vt.jsx(
     z,
     {
       className: Zf(Jf({ variant: g, size: s, className: a })),
@@ -8085,11 +8085,11 @@ const Jf = gf(
   );
 });
 rc.displayName = "Button";
-const qf = () => /* @__PURE__ */ at.jsxs(at.Fragment, { children: [
-  /* @__PURE__ */ at.jsx("style", { children: uf }),
-  /* @__PURE__ */ at.jsx("style", { children: sf }),
-  /* @__PURE__ */ at.jsx("div", { className: "widget", children: "Widget" }),
-  /* @__PURE__ */ at.jsx(rc, { className: "bg-slate-800", children: "Click me" })
+const qf = () => /* @__PURE__ */ vt.jsxs("div", { id: "widget", children: [
+  /* @__PURE__ */ vt.jsx("style", { children: uf }),
+  /* @__PURE__ */ vt.jsx("style", { children: sf }),
+  /* @__PURE__ */ vt.jsx("div", { className: "widget", children: "Widget" }),
+  /* @__PURE__ */ vt.jsx(rc, { className: "bg-slate-800", children: "Click me" })
 ] }), bf = (a) => a.replace(/-([a-z])/g, (g, s) => s.toUpperCase());
 class ep extends HTMLElement {
   constructor() {
@@ -8097,7 +8097,7 @@ class ep extends HTMLElement {
   }
   connectedCallback() {
     const g = this.getPropsFromAttributes();
-    Fi.createRoot(this.shadowRoot).render(/* @__PURE__ */ at.jsx(qf, { ...g }));
+    Fi.createRoot(this.shadowRoot).render(/* @__PURE__ */ vt.jsx(qf, { ...g }));
   }
   getPropsFromAttributes() {
     const g = {};
