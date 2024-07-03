@@ -8,7 +8,7 @@ export const Widget = () => {
       <style>{styles}</style>
       <style>{tailwindStyles}</style>
       <div className="widget">Widget</div>
-      <Button>Click me</Button>
+      <Button className="bg-slate-800">Click me</Button>
     </>
   );
 };
