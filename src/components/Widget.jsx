@@ -4,11 +4,11 @@ import { Button } from "@/components/ui/button";
 
 export const Widget = () => {
   return (
-    <>
+    <div id="widget">
       <style>{styles}</style>
       <style>{tailwindStyles}</style>
       <div className="widget">Widget</div>
       <Button className="bg-slate-800">Click me</Button>
-    </>
+    </div>
   );
 };
